@@ -20,3 +20,37 @@ A custom-designed macropad board using Raspberry Pi Pico 2, dual rotary encoders
 ## Key Design Features
 * **Using Berg strip:** Things are fully socketed using Berg strips, allowing for easy swapping, testing and safety during soldering.
 * **Ground Plane:** A dedicated copper pour layer has been used across the layout to connect all GND points.
+
+## Pin layout
+
+### Display (J1)
+
+| Pin Name | Connection Type | Pico pin | Working |
+| :--- | :--- | :--- | :--- |
+| 3V3 | Power | 3V3 | Power |
+| GND | Ground | GND | Ground |
+| DISP_CS | SPI Chip Select | GPIO 9 | Chip Select |
+| DISP_RESET | Shared Reset | GPIO 13 | Hardware Reset |
+| DISP_DC | Digital Output | GPIO 12 | Data/Command |
+| SPI_MOSI | SPI Data | GPIO 15 | Master Out Slave In |
+| SPI_SCK | SPI Clock | GPIO 14 | Serial Clock |
+| 3V3 | Power | 3V3 | Backlight |
+
+### Switches
+
+| Pin Name | Connection Type | Pico pin | Working |
+| :--- | :--- | :--- | :--- |
+| KEY_BACK | Digital Input | GPIO 0 | SW1  |
+| KEY_PAUSE | Digital Input | GPIO 1 | SW2  |
+| KEY_NEXT | Digital Input | GPIO 2 | SW3  |
+
+### Encoders
+
+| Pin Name | Connection Type | Pico pin | Working |
+| :--- | :--- | :--- | :--- |
+| ENC1_A | Digital Input | GPIO 3 | Rotary 1 Phase A |
+| ENC1_B | Digital Input | GPIO 4 | Rotary 1 Phase B |
+| ENC1_SW | Digital Input | GPIO 5 | Rotary 1 Click |
+| ENC2_A | Digital Input | GPIO 6 | Rotary 2 Phase A |
+| ENC2_B | Digital Input | GPIO 7 | Rotary 2 Phase B |
+| ENC2_SW | Digital Input | GPIO 8 | Rotary 2 Click |
